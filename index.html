@@ -23,7 +23,7 @@ body {
     border-radius:25px;
     box-shadow:0 15px 40px rgba(0,0,0,0.2);
     width:90%;
-    max-width:450px;
+    max-width:500px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -58,14 +58,15 @@ button:hover {
     margin-top:20px;
     color:#444;
     font-size:18px;
-    line-height:1.6;
+    line-height:1.7;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-img {
-    width:200px;
-    margin-top:15px;
-    border-radius:15px;
+.love-img {
+    width:220px;
+    margin-top:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 @keyframes fadeIn {
@@ -100,18 +101,24 @@ img {
 
 function showLove() {
     document.getElementById("mainBox").innerHTML = `
-        <h1>Happy Valentine's Day Poggu ❤️</h1>
+        <h1>Happy Valentine’s Day, My Poggu ❤️</h1>
 
-        <img src="https://i.imgur.com/1Q9Z1Zm.png" alt="Dudu Bubu Cute">
+        <img src="dudu-bubu.jpg" class="love-img" alt="Dudu Bubu">
 
         <div class="message">
-        I have not given you more surprises...<br>
-        Not given expensive gift...<br><br>
+        Maybe I haven’t given you grand surprises…<br>
+        Maybe I haven’t bought expensive gifts…<br><br>
 
-        But I really care for you Poggu ❤️<br><br>
+        But what I give you is real —<br>
+        My care, my loyalty, and my heart ❤️<br><br>
 
-        I love you so much Pillu ❤️<br>
-        I miss you so much Pillu ❤️<br><br>
+        You are not just my love,<br>
+        You are my comfort, my happiness, my safe place ❤️<br><br>
+
+        I love you so much, Pillu ❤️<br>
+        And I miss you every single day.<br><br>
+
+        <strong>Rani ❤️ Walal</strong><br><br>
 
         😘😘😘😘😘
         </div>
@@ -124,7 +131,7 @@ function moveButton(btn) {
     btn.style.left = Math.random()*80 + "%";
 }
 
-// Floating hearts
+// Floating hearts animation
 setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
