@@ -126,10 +126,27 @@ function showLove() {
 }
 
 function moveButton(btn) {
+    const container = document.querySelector(".container");
+
+    const containerRect = container.getBoundingClientRect();
+
+    const maxX = containerRect.width - btn.offsetWidth;
+    const maxY = containerRect.height - btn.offsetHeight;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
     btn.style.position = "absolute";
-    btn.style.top = Math.random()*80 + "%";
-    btn.style.left = Math.random()*80 + "%";
+    btn.style.left = randomX + "px";
+    btn.style.top = randomY + "px";
 }
+
+// Works for mobile tap also
+document.addEventListener("click", function(e){
+    if(e.target.classList.contains("no")){
+        moveButton(e.target);
+    }
+});
 
 // Floating hearts animation
 setInterval(() => {
